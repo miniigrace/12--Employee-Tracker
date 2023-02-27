@@ -18,7 +18,7 @@ SO THAT I can organize and plan my business
 
 This project is all about building a CLI (command line) application. Use of SQL and Inquirer are needed.
 
-Final project will have the following:
+Final project nhave the following:
 * Main menu
 * A way to add and view departments
 * A way to add and view roles
