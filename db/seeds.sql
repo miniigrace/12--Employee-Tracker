@@ -24,6 +24,6 @@ VALUES ("Mini", "Grace", 1, NULL),
        ("Zaraki", "Kenpachi", 5, 3),
        ("Grasha", "Ganda", 6, 5),
        ("Soo Hyun", "Kim", 7, NULL),
-       ("Kento", "Yamazaki", 8, 7);
-       ('Sheena', 'Doolittle', 7, NULL)
-       ('Mona', 'Bart', 7, 8)  
+       ("Kento", "Yamazaki", 8, 7),
+       ('Sheena', 'Doolittle', 7, NULL),
+       ('Mona', 'Bart', 7, 8);  
