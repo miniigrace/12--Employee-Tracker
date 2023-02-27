@@ -6,7 +6,8 @@ const connection = mysql.createConnection({host: 'localhost', user: 'root', pass
 connection.connect()
 
 init()
-//function to set/start application
+
+//starts application
 function init() {
   inquirer.prompt({
     type: "list",
@@ -90,6 +91,7 @@ function viewEmployees() {
   })
 };
 
+// view department
 function viewDepartments() {
   const depQuery = `SELECT * FROM department`
   connection.query(depQuery, (err, data) => {
@@ -99,6 +101,7 @@ function viewDepartments() {
   })
 };
 
+//view roles
 function viewRoles() {
   const roleQuery = `SELECT * FROM role`
   connection.query(roleQuery, (err, data) => {
@@ -108,6 +111,7 @@ function viewRoles() {
   })
 };
 
+//view emp by department
 function viewEmpByDep() {
   const depQuery1 = ("SELECT * FROM department");
 
@@ -137,7 +141,7 @@ function viewEmpByDep() {
   })
 };
 
-//view employees by manager//
+//view employees by manager
 function viewEmpByManager() {
   let query1 = `SELECT * FROM employee e WHERE e.manager_id IS NULL`
 
@@ -170,7 +174,8 @@ function viewEmpByManager() {
       })
   })
 };
-//adding a new employee
+
+//adding new employee
 function addEmployee() {
   let addQuery = `SELECT employee.id, employee.first_name, employee.last_name, employee.role_id, role.title, department.name,
   role.salary, employee.manager_id 
@@ -238,6 +243,7 @@ function removeEmployee() {
   })
 };
 
+// removing role
 function removeRole() {
   let query1 = `SELECT * FROM role`
   connection.query(query1, (err, res) => {
@@ -268,10 +274,7 @@ function updateEmpRole() {
   connection.query(query, (err, response) => {
 
     const employees = response.map(function (element) {
-    //   return {
-    //     name: `${element.first_name} ${element.last_name}`,
-    //     value: element.id
-    //   }
+   
     
       return `${element.last_name}`
     });
@@ -291,7 +294,7 @@ function updateEmpRole() {
               name: role.title,
               value: role.id
             }
-            //return role.title
+            
           });
 
           inquirer.prompt([{
@@ -321,12 +324,8 @@ function updateEmpRole() {
                   }
                 }
 
-                // if (res.changedRows === 1) {
                   console.log(`Successfully updated ${inputEmployee.employee} to position of ${tempPosition}`);
-                // } else {
-                  //console.log(`Error: ${tempName}'s current position is ${tempPosition}`)
-                // }
-                
+            
                 init();
               })
             })
@@ -335,7 +334,7 @@ function updateEmpRole() {
   })
 };
 
-//function to add a new role
+//add new role
 function addRole() {
   let query1 = `SELECT * FROM role`
   connection.query(query1, (err, data) => {
@@ -369,7 +368,7 @@ function addRole() {
   })
 }
 
-//function to add new department
+//add new department
 function addDepartment() {
   let query1 = `SELECT * FROM department`
   connection.query(query1, (err, res) => {
@@ -394,6 +393,7 @@ function addDepartment() {
   })
 };
 
+// removing department
 function removeDept() {
   let query1 = `SELECT * FROM department`
   connection.query(query1, (err, res) => {
