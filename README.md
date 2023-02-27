@@ -30,9 +30,11 @@ Final project will have the following:
 The following video shows an example of the application being used from the command line:
 
 ![demoGIF](https://user-images.githubusercontent.com/112984208/221454677-dad21220-1cba-44ec-a2a8-3d324d48df62.gif)
+![screenshot](https://user-images.githubusercontent.com/112984208/221459275-ccd4c121-2132-47fd-957b-fa61f78b5607.png)
 
 ## See the walkthrough video on how to use the application [here](https://drive.google.com/file/d/1amNl4z0Y-hQIDJP3dH5WSLVfzKIsiBIO/view)
 
 ## Acknowledgements
 A huge thanks to our instructor Robert Wijtman for teaching everything I know and TA Jili Jiang for helping me with the challenge.
+
 
